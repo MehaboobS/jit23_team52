@@ -47,7 +47,8 @@
 
 ## ITERATIVE PRUNING ON THE VGG16 MODEL
 
-<img width="1421" height="442" alt="screenshot" src="https://github.com/user-attachments/assets/9f0f1629-0d7b-4fc9-8afd-341a95fb1a6d" />
+![Uploading screenshot.png…]()
+
 
 
 ## Confusion Matrix Comparison (Before Pruning vs After Pruning)
