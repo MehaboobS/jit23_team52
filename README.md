@@ -69,10 +69,6 @@
 </tr>
 </table>
 
-## Negligible change in accuracy after Iterative Pruning for VGG16.
-<img width="1421" height="442" alt="screenshot" src="https://github.com/user-attachments/assets/585feb2a-2cd8-4c94-a2fc-b445657ea7be" />
-
-
 
 
 
