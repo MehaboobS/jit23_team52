@@ -45,7 +45,32 @@
 
 <img width="732" height="180" alt="Screenshot 2026-07-30 110211" src="https://github.com/user-attachments/assets/65265234-175d-45d4-bb1d-ff48b6ced28d" />
 
+## ITERATIVE PRUNING ON THE VGG16 MODEL
 
+<img width="1421" height="442" alt="screenshot" src="https://github.com/user-attachments/assets/9f0f1629-0d7b-4fc9-8afd-341a95fb1a6d" />
+
+
+## Confusion Matrix Comparison (Before Pruning vs After Pruning)
+
+<table>
+<tr>
+<td align="center" width="50%">
+
+### Before Pruning
+<img src="https://github.com/user-attachments/assets/bb0be7b9-4bcf-4c53-903c-9e955711d522" width="100%">
+
+</td>
+
+<td align="center" width="50%">
+
+### After Pruning
+<img width="1000" height="5000" alt="PrunedHoloVGGNet16" src="https://github.com/user-attachments/assets/34385a02-ef97-4cff-9edf-beda1ba8b1f0" />
+</td>
+</tr>
+</table>
+
+## Negligible change in accuracy after Iterative Pruning for VGG16.
+<img width="1421" height="442" alt="screenshot" src="https://github.com/user-attachments/assets/585feb2a-2cd8-4c94-a2fc-b445657ea7be" />
 
 
 
