@@ -50,9 +50,7 @@
 <img width="1429" height="290" alt="screenshot" src="https://github.com/user-attachments/assets/6b8ce6f6-f2dd-47d7-8dec-3796e04ade69" />
 
 
-
-
-## Confusion Matrix Comparison (Before Pruning vs After Pruning)
+## GRADCam (Before Pruning vs After Pruning)
 
 <table>
 <tr>
@@ -71,6 +69,28 @@
 </tr>
 </table>
 
+
+## CONFUSION MATRIX (Before Pruning vs After Pruning)
+
+<table>
+<tr>
+<td align="center" width="50%">
+
+### Before Pruning
+
+<img width="1000" height="800" alt="HoloVGGNet16ConfusionMatrix" src="https://github.com/user-attachments/assets/74dcaf57-164f-46b1-857b-7b26f1114d85" />
+
+</td>
+
+<td align="center" width="50%">
+
+### After Pruning
+<img width="3000" height="2400" alt="PrunedHoloVGGNet16ConfusionMatrix" src="https://github.com/user-attachments/assets/8733ed09-d49a-4817-bec5-4c9d54083e40" />
+
+
+</td>
+</tr>
+</table>
 
 
 
