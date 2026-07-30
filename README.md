@@ -47,7 +47,8 @@
 
 ## ITERATIVE PRUNING ON THE VGG16 MODEL
 
-![Uploading screenshot.png…]()
+<img width="1429" height="290" alt="screenshot" src="https://github.com/user-attachments/assets/6b8ce6f6-f2dd-47d7-8dec-3796e04ade69" />
+
 
 
 
