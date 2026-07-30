@@ -1,0 +1,60 @@
+import time
+import cv2
+import numpy as np
+import onnxruntime as ort
+
+# -----------------------------
+# Paths
+# -----------------------------
+MODEL_PATH = "/home/zaq/Desktop/hologram_classifier/model/resnet/resnet18_pruned_50pct.onnx"
+IMAGE_PATH = "/home/zaq/Desktop/hologram_classifier/data/Station44_008456_00001_splat_aug0.tif"
+
+# Ground truth label from CSV
+GROUND_TRUTH = 3
+
+# -----------------------------
+# Load ONNX model
+# ----------------------------
+session = ort.InferenceSession(
+    MODEL_PATH,
+    providers=["CPUExecutionProvider"]
+)
+
+input_name = session.get_inputs()[0].name
+
+# -----------------------------
+# Preprocess image
+# -----------------------------
+img = cv2.imread(IMAGE_PATH, cv2.IMREAD_GRAYSCALE)
+img = cv2.resize(img, (128, 128))
+img = img.astype(np.float32) / 255.0
+img = np.expand_dims(img, axis=(0, 1))  # Shape: (1,1,128,128)
+
+# -----------------------------
+# Warm-up (ignore first run)
+# -----------------------------
+session.run(None, {input_name: img})
+
+# -----------------------------
+# Measure inference time
+# -----------------------------
+start = time.perf_counter()
+
+output = session.run(None, {input_name: img})[0]
+
+end = time.perf_counter()
+
+prediction = int(np.argmax(output))
+latency_ms = (end - start) * 1000
+
+# -----------------------------
+# Results
+# -----------------------------
+print("=" * 50)
+print(f"Image           : {IMAGE_PATH.split('/')[-1]}")
+print(f"Ground Truth    : {GROUND_TRUTH}")
+print(f"Prediction      : {prediction}")
+print(f"Correct         : {prediction == GROUND_TRUTH}")
+print(f"Inference Time  : {latency_ms:.3f} ms")
+print(f"FPS             : {1000/latency_ms:.2f}")
+print("=" * 50)
